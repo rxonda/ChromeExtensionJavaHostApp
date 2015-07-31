@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <statusListener class="ch.qos.logback.core.status.NopStatusListener" />
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>C:/Users/raphael.costa/AppLog.log</file>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <Pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</Pattern>
+        </encoder>
+    </appender>
+
+    <logger name="br.com.riocard" level="all" additivity="false">
+        <appender-ref ref="FILE"/>
+    </logger>
+
+
+    <root level="error">
+        <appender-ref ref="FILE" />
+    </root>
+</configuration>
